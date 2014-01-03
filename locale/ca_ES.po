@@ -1,0 +1,59 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:production.route.operation,work_center_category:"
+msgid "Work Center Category"
+msgstr "Categoria de centre de treball"
+
+msgctxt "field:production.work_center.category,cost_price:"
+msgid "Cost Price"
+msgstr "Preu de cost"
+
+msgctxt "field:production.work_center.category,uom:"
+msgid "Uom"
+msgstr "UdM"
+
+msgctxt "model:ir.action,name:act_production_route"
+msgid "Route"
+msgstr "Ruta"
+
+msgctxt "model:ir.action,name:act_production_route_operation"
+msgid "Route Operation"
+msgstr "Operació de ruta"
+
+msgctxt "model:ir.action,name:act_production_work_center"
+msgid "Work Center"
+msgstr "Centre de treball"
+
+msgctxt "model:ir.action,name:act_production_work_center_category"
+msgid "Work Center Category"
+msgstr "Categoria de centre de treball"
+
+msgctxt "model:ir.ui.menu,name:menu_production_route"
+msgid "Routes"
+msgstr "Rutes"
+
+msgctxt "model:ir.ui.menu,name:menu_production_work_center"
+msgid "Work Centers"
+msgstr "Centres de treball"
+
+msgctxt "model:ir.ui.menu,name:menu_production_work_center_category"
+msgid "Work Center Categories"
+msgstr "Categories de centre de treball"
+
+msgctxt "view:production.route.operation:"
+msgid "Route Operation"
+msgstr "Operació de ruta"
+
+msgctxt "view:production.route:"
+msgid "Route"
+msgstr "Ruta"
+
+msgctxt "view:production.work_center.category:"
+msgid "Work Center Category"
+msgstr "Categoria de centre de treball"
+
+msgctxt "view:production.work_center:"
+msgid "Work Center"
+msgstr "Centre de treball"

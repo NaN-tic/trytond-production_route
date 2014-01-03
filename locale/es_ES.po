@@ -1,0 +1,61 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:production.route.operation,work_center_category:"
+msgid "Work Center Category"
+msgstr ""
+
+#, fuzzy
+msgctxt "field:production.work_center.category,cost_price:"
+msgid "Cost Price"
+msgstr "Precio de coste"
+
+#, fuzzy
+msgctxt "field:production.work_center.category,uom:"
+msgid "Uom"
+msgstr "UdM"
+
+msgctxt "model:ir.action,name:act_production_route"
+msgid "Route"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_production_route_operation"
+msgid "Route Operation"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_production_work_center"
+msgid "Work Center"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_production_work_center_category"
+msgid "Work Center Category"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_production_route"
+msgid "Routes"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_production_work_center"
+msgid "Work Centers"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_production_work_center_category"
+msgid "Work Center Categories"
+msgstr ""
+
+msgctxt "view:production.route.operation:"
+msgid "Route Operation"
+msgstr ""
+
+msgctxt "view:production.route:"
+msgid "Route"
+msgstr ""
+
+msgctxt "view:production.work_center.category:"
+msgid "Work Center Category"
+msgstr ""
+
+msgctxt "view:production.work_center:"
+msgid "Work Center"
+msgstr ""
