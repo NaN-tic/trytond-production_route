@@ -5,4 +5,6 @@
     <field name="route"/>
     <field name="work_center_category"/>
     <field name="work_center"/>
+    <field name="quantity"/>
+    <field name="uom"/>
 </tree>

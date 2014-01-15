@@ -37,7 +37,7 @@ class WorkCenter(ModelSQL, ModelView):
 
     name = fields.Char('Name', required=True)
     category = fields.Many2One('production.work_center.category', 'Category',
-        on_change=['category', 'cost_price', 'uom'])
+        on_change=['category', 'cost_price', 'uom'], required=True)
     type = fields.Selection([
             ('machine', 'Machine'),
             ('employee', 'Employee'),
@@ -114,14 +114,24 @@ class RouteOperation(ModelSQL, ModelView):
     sequence = fields.Integer('Sequence')
     operation_type = fields.Many2One('production.operation.type',
         'Operation Type', required=True)
+    work_center_category = fields.Many2One('production.work_center.category',
+        'Work Center Category', required=True)
     work_center = fields.Many2One('production.work_center', 'Work Center',
         domain=[
-            If(Bool(Eval('work_center_category', 0)),
-                ('category', '=', Eval('work_center_category')),
-                (),
-                )], depends=['work_center_category'])
-    work_center_category = fields.Many2One('production.work_center.category',
-        'Work Center Category')
+            ('category', '=', Eval('work_center_category'),
+            )], depends=['work_center_category'])
+    uom_category = fields.Function(fields.Many2One(
+            'product.uom.category', 'Uom Category',
+            on_change_with=['work_center_category', 'work_center']),
+        'on_change_with_uom_category')
+    uom = fields.Many2One('product.uom', 'Uom', required=True,
+        on_change_with=['work_center_category', 'work_center'], domain=[
+                ('category', '=', Eval('uom_category', 0)),
+                ], depends=['uom_category'])
+    unit_digits = fields.Function(fields.Integer('Unit Digits',
+            on_change_with=['uom']), 'on_change_with_unit_digits')
+    quantity = fields.Float('Quantity', required=True,
+        digits=(16, Eval('unit_digits', 2)), depends=['unit_digits'])
 
     @classmethod
     def __setup__(cls):
@@ -132,3 +142,22 @@ class RouteOperation(ModelSQL, ModelView):
     def order_sequence(tables):
         table, _ = tables[None]
         return [table.sequence == None, table.sequence]
+
+    def on_change_with_uom(self, name=None):
+        if self.work_center_category:
+            return self.work_center_category.uom.id
+        if self.work_center:
+            return self.work_center.uom.id
+
+    def on_change_with_unit_digits(self, name=None):
+        if self.uom:
+            return self.uom.digits
+        return 2
+
+    def on_change_with_uom_category(self, name=None):
+        if self.work_center_category:
+            return self.work_center_category.uom.category.id
+        if self.work_center:
+            return self.work_center.uom.category.id
+
+
