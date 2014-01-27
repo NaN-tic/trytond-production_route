@@ -12,4 +12,5 @@ def register():
         OperationType,
         Route,
         RouteOperation,
+        BOM,
         module='production_route', type_='model')

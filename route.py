@@ -1,9 +1,11 @@
 from decimal import Decimal
 from trytond.model import fields, ModelSQL, ModelView
+from trytond.pool import PoolMeta
 from trytond.pyson import Eval, If, Bool
 
 __all__ = ['WorkCenterCategory', 'WorkCenter', 'OperationType', 'Route',
-    'RouteOperation']
+    'RouteOperation', 'BOM']
+__metaclass__ = PoolMeta
 
 
 class WorkCenterCategory(ModelSQL, ModelView):
@@ -161,3 +163,7 @@ class RouteOperation(ModelSQL, ModelView):
             return self.work_center.uom.category.id
 
 
+class BOM:
+    __name__ = 'production.bom'
+
+    route = fields.Many2One('production.route', 'Route')
