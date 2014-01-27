@@ -2,60 +2,110 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
+msgctxt "field:production.bom,route:"
+msgid "Route"
+msgstr "Ruta"
+
+msgctxt "field:production.route,active:"
+msgid "Active"
+msgstr "Activo"
+
+msgctxt "field:production.route.operation,quantity:"
+msgid "Quantity"
+msgstr "Cantidad"
+
+msgctxt "field:production.route.operation,unit_digits:"
+msgid "Unit Digits"
+msgstr "Dígitos unidad"
+
+msgctxt "field:production.route.operation,uom:"
+msgid "Uom"
+msgstr "UdM"
+
+msgctxt "field:production.route.operation,uom_category:"
+msgid "Uom Category"
+msgstr "Categoría de UdM"
+
 msgctxt "field:production.route.operation,work_center_category:"
 msgid "Work Center Category"
-msgstr ""
+msgstr "Categoria del centro de trabajo"
 
-#, fuzzy
+msgctxt "field:production.work_center,active:"
+msgid "Active"
+msgstr "Activo"
+
+msgctxt "field:production.work_center,uom_category:"
+msgid "Uom Category"
+msgstr "Categoría de UdM"
+
+msgctxt "field:production.work_center.category,active:"
+msgid "Active"
+msgstr "Activo"
+
 msgctxt "field:production.work_center.category,cost_price:"
 msgid "Cost Price"
 msgstr "Precio de coste"
 
-#, fuzzy
 msgctxt "field:production.work_center.category,uom:"
 msgid "Uom"
 msgstr "UdM"
 
+msgctxt "field:production.work_center.category,uom_category:"
+msgid "Uom Category"
+msgstr "Categoría de UdM"
+
+msgctxt "model:ir.action,name:act_production_operation_type"
+msgid "Operation Types"
+msgstr "Tipos de operación"
+
 msgctxt "model:ir.action,name:act_production_route"
 msgid "Route"
-msgstr ""
+msgstr "Ruta"
 
 msgctxt "model:ir.action,name:act_production_route_operation"
 msgid "Route Operation"
-msgstr ""
+msgstr "Ruta de operación"
 
 msgctxt "model:ir.action,name:act_production_work_center"
 msgid "Work Center"
-msgstr ""
+msgstr "Centro de trabajo"
 
 msgctxt "model:ir.action,name:act_production_work_center_category"
 msgid "Work Center Category"
-msgstr ""
+msgstr "Categoria del centro de trabajo"
+
+msgctxt "model:ir.ui.menu,name:menu_production_operation_type"
+msgid "Operation Types"
+msgstr "Tipos de operación"
 
 msgctxt "model:ir.ui.menu,name:menu_production_route"
 msgid "Routes"
-msgstr ""
+msgstr "Rutas"
 
 msgctxt "model:ir.ui.menu,name:menu_production_work_center"
 msgid "Work Centers"
-msgstr ""
+msgstr "Centros de trabajo"
 
 msgctxt "model:ir.ui.menu,name:menu_production_work_center_category"
 msgid "Work Center Categories"
-msgstr ""
+msgstr "Categorias del centros de trabajo"
+
+msgctxt "view:production.operation.type:"
+msgid "Operation Type"
+msgstr "Tipo de operación"
 
 msgctxt "view:production.route.operation:"
 msgid "Route Operation"
-msgstr ""
+msgstr "Ruta de operación"
 
 msgctxt "view:production.route:"
 msgid "Route"
-msgstr ""
+msgstr "Ruta"
 
 msgctxt "view:production.work_center.category:"
 msgid "Work Center Category"
-msgstr ""
+msgstr "Categoria del centro de trabajo"
 
 msgctxt "view:production.work_center:"
 msgid "Work Center"
-msgstr ""
+msgstr "Centro de trabajo"

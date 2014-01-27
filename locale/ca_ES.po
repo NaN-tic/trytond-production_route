@@ -2,9 +2,45 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
+msgctxt "field:production.bom,route:"
+msgid "Route"
+msgstr "Ruta"
+
+msgctxt "field:production.route,active:"
+msgid "Active"
+msgstr "Actiu"
+
+msgctxt "field:production.route.operation,quantity:"
+msgid "Quantity"
+msgstr "Quantitat"
+
+msgctxt "field:production.route.operation,unit_digits:"
+msgid "Unit Digits"
+msgstr "Dígits de la unitat"
+
+msgctxt "field:production.route.operation,uom:"
+msgid "Uom"
+msgstr "UdM"
+
+msgctxt "field:production.route.operation,uom_category:"
+msgid "Uom Category"
+msgstr "Categoria d'UdM"
+
 msgctxt "field:production.route.operation,work_center_category:"
 msgid "Work Center Category"
 msgstr "Categoria de centre de treball"
+
+msgctxt "field:production.work_center,active:"
+msgid "Active"
+msgstr "Actiu"
+
+msgctxt "field:production.work_center,uom_category:"
+msgid "Uom Category"
+msgstr "Categoria d'UdM"
+
+msgctxt "field:production.work_center.category,active:"
+msgid "Active"
+msgstr "Actiu"
 
 msgctxt "field:production.work_center.category,cost_price:"
 msgid "Cost Price"
@@ -13,6 +49,14 @@ msgstr "Preu de cost"
 msgctxt "field:production.work_center.category,uom:"
 msgid "Uom"
 msgstr "UdM"
+
+msgctxt "field:production.work_center.category,uom_category:"
+msgid "Uom Category"
+msgstr "Categoria d'UdM"
+
+msgctxt "model:ir.action,name:act_production_operation_type"
+msgid "Operation Types"
+msgstr "Tipus d'operació"
 
 msgctxt "model:ir.action,name:act_production_route"
 msgid "Route"
@@ -30,6 +74,10 @@ msgctxt "model:ir.action,name:act_production_work_center_category"
 msgid "Work Center Category"
 msgstr "Categoria de centre de treball"
 
+msgctxt "model:ir.ui.menu,name:menu_production_operation_type"
+msgid "Operation Types"
+msgstr "Tipus d'operació"
+
 msgctxt "model:ir.ui.menu,name:menu_production_route"
 msgid "Routes"
 msgstr "Rutes"
@@ -41,6 +89,10 @@ msgstr "Centres de treball"
 msgctxt "model:ir.ui.menu,name:menu_production_work_center_category"
 msgid "Work Center Categories"
 msgstr "Categories de centre de treball"
+
+msgctxt "view:production.operation.type:"
+msgid "Operation Type"
+msgstr "Tipus d'operació"
 
 msgctxt "view:production.route.operation:"
 msgid "Route Operation"
