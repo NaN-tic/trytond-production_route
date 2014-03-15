@@ -13,8 +13,16 @@
     <field name="work_center_category"/>
     <label name="work_center"/>
     <field name="work_center"/>
+    <label name="time"/>
+    <group id="time" col="2">
+        <field name="time"/>
+        <field name="time_uom"/>
+    </group>
+    <label name="calculation"/>
+    <field name="calculation"/>
     <label name="quantity"/>
-    <field name="quantity"/>
-    <label name="uom"/>
-    <field name="uom"/>
+    <group id="quantity" col="2">
+        <field name="quantity"/>
+        <field name="quantity_uom"/>
+    </group>
 </form>

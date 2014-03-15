@@ -8,13 +8,13 @@
     <field name="active"/>
     <label name="category"/>
     <field name="category"/>
-    <newline/>
+    <label name="cost_price"/>
+    <group id="cost_price" col="2">
+        <field name="cost_price"/>
+        <field name="uom"/>
+    </group>
     <label name="type"/>
     <field name="type"/>
     <label name="employee"/>
     <field name="employee"/>
-    <label name="cost_price"/>
-    <field name="cost_price"/>
-    <label name="uom"/>
-    <field name="uom"/>
 </form>

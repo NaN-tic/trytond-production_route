@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <tryton>
     <data>
-        <record model="ir.ui.view" id="production_bom_view_form">
-            <field name="model">production.bom</field>
-            <field name="name">bom_form</field>
-            <field name="inherit" ref="production.bom_view_form"/>
-        </record>
         <record model="ir.ui.view" id="production_route_operation_view_form">
             <field name="model">production.route.operation</field>
             <field name="type">form</field>

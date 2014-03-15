@@ -6,5 +6,7 @@
     <field name="name"/>
     <label name="active"/>
     <field name="active"/>
+    <label name="uom"/>
+    <field name="uom"/>
     <field name="operations" colspan="4"/>
 </form>

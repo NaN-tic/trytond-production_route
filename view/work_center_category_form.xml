@@ -7,7 +7,8 @@
     <label name="active"/>
     <field name="active"/>
     <label name="cost_price"/>
-    <field name="cost_price"/>
-    <label name="uom"/>
-    <field name="uom"/>
+    <group id="cost_price" col="2">
+        <field name="cost_price"/>
+        <field name="uom"/>
+    </group>
 </form>

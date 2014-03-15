@@ -3,5 +3,6 @@
      copyright notices and license terms. -->
 <tree string="Route">
     <field name="name"/>
+    <field name="uom"/>
     <field name="active" tree_invisible="1"/>
 </tree>
