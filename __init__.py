@@ -3,7 +3,7 @@
 
 from trytond.pool import Pool
 from .route import *
-
+from .product import *
 
 def register():
     Pool.register(
@@ -12,4 +12,5 @@ def register():
         OperationType,
         Route,
         RouteOperation,
+        ProductBom,
         module='production_route', type_='model')
