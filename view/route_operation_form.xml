@@ -25,4 +25,6 @@
         <field name="quantity"/>
         <field name="quantity_uom"/>
     </group>
+    <label name="notes" colspan="4" xalign="0.0"/>
+    <field name="notes" colspan="4"/>
 </form>

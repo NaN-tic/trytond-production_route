@@ -164,6 +164,7 @@ class RouteOperation(ModelSQL, ModelView):
     quantity_uom_category = fields.Function(fields.Many2One(
             'product.uom.category', 'Quantity UOM Category'),
         'get_quantity_uom_category')
+    notes = fields.Text('Notes')
 
     @staticmethod
     def default_calculation():
