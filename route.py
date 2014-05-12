@@ -116,7 +116,8 @@ class RouteOperation(ModelSQL, ModelView):
     'Route Operation'
     __name__ = 'production.route.operation'
 
-    route = fields.Many2One('production.route', 'Route', required=True)
+    route = fields.Many2One('production.route', 'Route', required=True,
+        ondelete='CASCADE')
     sequence = fields.Integer('Sequence')
     operation_type = fields.Many2One('production.operation.type',
         'Operation Type', required=True)
