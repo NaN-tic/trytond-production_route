@@ -2,6 +2,8 @@ from decimal import Decimal
 from trytond.model import fields, ModelSQL, ModelView
 from trytond.pool import PoolMeta, Pool
 from trytond.pyson import Eval, If, Bool, Id
+from trytond.config import CONFIG
+DIGITS = int(CONFIG.get('unit_price_digits', 4))
 
 __all__ = ['WorkCenterCategory', 'WorkCenter', 'OperationType', 'Route',
     'RouteOperation']
@@ -13,7 +15,8 @@ class WorkCenterCategory(ModelSQL, ModelView):
     __name__ = 'production.work_center.category'
 
     name = fields.Char('Name', required=True)
-    cost_price = fields.Numeric('Cost Price', digits=(16, 4), required=True)
+    cost_price = fields.Numeric('Cost Price', digits=(16, DIGITS),
+        required=True)
     uom = fields.Many2One('product.uom', 'Uom', required=True, domain=[
             ('category', '=', Id('product', 'uom_cat_time')),
             ])
@@ -48,7 +51,8 @@ class WorkCenter(ModelSQL, ModelView):
             'invisible': Eval('type') != 'employee',
             'required': Eval('type') == 'employee',
             }, depends=['type'], on_change=['employee'])
-    cost_price = fields.Numeric('Cost Price', digits=(16, 4), required=True)
+    cost_price = fields.Numeric('Cost Price', digits=(16, DIGITS),
+        required=True)
     uom = fields.Many2One('product.uom', 'Uom', required=True, domain=[
             ('category', '=', Id('product', 'uom_cat_time')),
             ])
@@ -142,7 +146,7 @@ class RouteOperation(ModelSQL, ModelView):
         digits=(16, Eval('quantity_uom_digits', 2)),
         depends=['quantity_uom_digits', 'calculation'],
         help='Quantity of the production product processed by the specified '
-        'time.' )
+        'time.')
     quantity_uom = fields.Many2One('product.uom', 'Quantity UOM', states={
             'required': Eval('calculation') == 'standard',
             'invisible': Eval('calculation') != 'standard',
