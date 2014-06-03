@@ -3,6 +3,7 @@ from trytond.model import fields, ModelSQL, ModelView
 from trytond.pool import PoolMeta, Pool
 from trytond.pyson import Eval, If, Bool, Id
 from trytond.config import CONFIG
+from trytond.transaction import Transaction
 DIGITS = int(CONFIG.get('unit_price_digits', 4))
 
 __all__ = ['WorkCenterCategory', 'WorkCenter', 'OperationType', 'Route',
@@ -42,18 +43,20 @@ class WorkCenter(ModelSQL, ModelView):
 
     name = fields.Char('Name', required=True)
     category = fields.Many2One('production.work_center.category', 'Category',
-        on_change=['category', 'cost_price', 'uom'], required=True)
+        required=True)
     type = fields.Selection([
             ('machine', 'Machine'),
             ('employee', 'Employee'),
             ], 'Type', required=True)
-    employee = fields.Many2One('company.employee', 'Employee', states={
+    employee = fields.Many2One('company.employee', 'Employee',
+        states={
             'invisible': Eval('type') != 'employee',
             'required': Eval('type') == 'employee',
-            }, depends=['type'], on_change=['employee'])
+            }, depends=['type'])
     cost_price = fields.Numeric('Cost Price', digits=(16, DIGITS),
         required=True)
-    uom = fields.Many2One('product.uom', 'Uom', required=True, domain=[
+    uom = fields.Many2One('product.uom', 'Uom', required=True,
+        domain=[
             ('category', '=', Id('product', 'uom_cat_time')),
             ])
     active = fields.Boolean('Active', select=True)
@@ -70,6 +73,7 @@ class WorkCenter(ModelSQL, ModelView):
     def default_cost_price():
         return Decimal('0.0')
 
+    @fields.depends('category', 'cost_price', 'uom')
     def on_change_category(self):
         res = {
             'uom': None,
@@ -84,6 +88,7 @@ class WorkCenter(ModelSQL, ModelView):
             res['cost_price'] = self.category.cost_price
         return res
 
+    @fields.depends('employee')
     def on_change_employee(self):
         ModelData = Pool().get('ir.model.data')
         # Check employee is not empty and timesheet_cost module is installed
@@ -108,7 +113,9 @@ class Route(ModelSQL, ModelView):
     name = fields.Char('Name', required=True)
     active = fields.Boolean('Active', select=True)
     operations = fields.One2Many('production.route.operation', 'route',
-        'Operations')
+        'Operations', context={
+            'route_uom': Eval('uom', 0),
+            })
     uom = fields.Many2One('product.uom', 'UOM', required=True)
 
     @staticmethod
@@ -137,9 +144,10 @@ class RouteOperation(ModelSQL, ModelView):
         domain=[
             ('category', '=', Id('product', 'uom_cat_time')),
             ], on_change_with=['work_center_category', 'work_center'])
-    time_uom_digits = fields.Function(fields.Integer('Time UOM Digits',
-            on_change_with=['time_uom']), 'on_change_with_time_uom_digits')
-    quantity = fields.Float('Quantity', states={
+    time_uom_digits = fields.Function(fields.Integer('Time UOM Digits'),
+        'on_change_with_time_uom_digits')
+    quantity = fields.Float('Quantity',
+        states={
             'required': Eval('calculation') == 'standard',
             'invisible': Eval('calculation') != 'standard',
             },
@@ -147,14 +155,17 @@ class RouteOperation(ModelSQL, ModelView):
         depends=['quantity_uom_digits', 'calculation'],
         help='Quantity of the production product processed by the specified '
         'time.')
-    quantity_uom = fields.Many2One('product.uom', 'Quantity UOM', states={
+    quantity_uom = fields.Many2One('product.uom', 'Quantity UOM',
+        states={
             'required': Eval('calculation') == 'standard',
             'invisible': Eval('calculation') != 'standard',
-            }, domain=[
+            },
+        domain=[
             If(Bool(Eval('quantity_uom_category', 0)),
             ('category', '=', Eval('quantity_uom_category')),
             (),
-            )], depends=['quantity_uom_category'])
+            )],
+        depends=['quantity_uom_category'])
     calculation = fields.Selection([
             ('standard', 'Standard'),
             ('fixed', 'Fixed'),
@@ -163,12 +174,12 @@ class RouteOperation(ModelSQL, ModelView):
         'the indicated time in the production without considering the '
         'quantities produced. The latter is useful for a setup or cleaning '
         'operation, for example.')
-    quantity_uom_digits = fields.Function(fields.Integer('Quantity UOM Digits',
-            on_change_with=['quantity_uom']),
+    quantity_uom_digits = fields.Function(fields.Integer(
+            'Quantity UOM Digits'),
         'on_change_with_quantity_uom_digits')
     quantity_uom_category = fields.Function(fields.Many2One(
             'product.uom.category', 'Quantity UOM Category'),
-        'get_quantity_uom_category')
+        'on_cange_with_quantity_uom_category')
     notes = fields.Text('Notes')
 
     @staticmethod
@@ -185,21 +196,36 @@ class RouteOperation(ModelSQL, ModelView):
         table, _ = tables[None]
         return [table.sequence == None, table.sequence]
 
-    def get_quantity_uom_category(self, name):
+    @staticmethod
+    def default_quantity_uom_category():
+        pool = Pool()
+        Uom = pool.get('product.uom')
+        context = Transaction().context
+        if 'route_uom' in context:
+            route_uom = Uom(context['route_uom'])
+            return route_uom.category.id
+
+
+    @fields.depends('route')
+    def on_change_with_quantity_uom_category(self, name):
         if self.route and self.route.uom:
             return self.route.uom.category.id
+        return None
 
+    @fields.depends('work_center_category', 'work_center')
     def on_change_with_time_uom(self, name=None):
         if self.work_center_category:
             return self.work_center_category.uom.id
         if self.work_center:
             return self.work_center.uom.id
 
+    @fields.depends('time_uom')
     def on_change_with_time_uom_digits(self, name=None):
         if self.time_uom:
             return self.time_uom.digits
         return 2
 
+    @fields.depends('quantity_uom')
     def on_change_with_quantity_uom_digits(self, name=None):
         if self.quantity_uom:
             return self.quantity_uom.digits
