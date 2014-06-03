@@ -179,7 +179,7 @@ class RouteOperation(ModelSQL, ModelView):
         'on_change_with_quantity_uom_digits')
     quantity_uom_category = fields.Function(fields.Many2One(
             'product.uom.category', 'Quantity UOM Category'),
-        'on_cange_with_quantity_uom_category')
+        'on_change_with_quantity_uom_category')
     notes = fields.Text('Notes')
 
     @staticmethod
