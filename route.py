@@ -143,7 +143,7 @@ class RouteOperation(ModelSQL, ModelView):
     time_uom = fields.Many2One('product.uom', 'Time UOM', required=True,
         domain=[
             ('category', '=', Id('product', 'uom_cat_time')),
-            ], on_change_with=['work_center_category', 'work_center'])
+            ])
     time_uom_digits = fields.Function(fields.Integer('Time UOM Digits'),
         'on_change_with_time_uom_digits')
     quantity = fields.Float('Quantity',
@@ -204,7 +204,6 @@ class RouteOperation(ModelSQL, ModelView):
         if 'route_uom' in context:
             route_uom = Uom(context['route_uom'])
             return route_uom.category.id
-
 
     @fields.depends('route')
     def on_change_with_quantity_uom_category(self, name):
