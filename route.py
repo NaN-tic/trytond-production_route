@@ -2,9 +2,9 @@ from decimal import Decimal
 from trytond.model import fields, ModelSQL, ModelView
 from trytond.pool import PoolMeta, Pool
 from trytond.pyson import Eval, If, Bool, Id
-from trytond.config import CONFIG
+from trytond.config import config
 from trytond.transaction import Transaction
-DIGITS = int(CONFIG.get('unit_price_digits', 4))
+DIGITS = int(config.get('config', 'unit_price_digits', 4))
 
 __all__ = ['WorkCenterCategory', 'WorkCenter', 'OperationType', 'Route',
     'RouteOperation']
@@ -206,7 +206,7 @@ class RouteOperation(ModelSQL, ModelView):
             return route_uom.category.id
 
     @fields.depends('route')
-    def on_change_with_quantity_uom_category(self, name):
+    def on_change_with_quantity_uom_category(self, name=None):
         if self.route and self.route.uom:
             return self.route.uom.category.id
         return None
