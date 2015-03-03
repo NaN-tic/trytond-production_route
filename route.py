@@ -229,3 +229,12 @@ class RouteOperation(ModelSQL, ModelView):
         if self.quantity_uom:
             return self.quantity_uom.digits
         return 2
+
+    def compute_time(self, quantity, uom):
+        Uom = Pool().get('product.uom')
+        if self.calculation == 'standard':
+            quantity = Uom.compute_qty(uom, quantity, to_uom=self.quantity_uom,
+                round=False)
+            factor = quantity / self.quantity
+            return Uom.round(self.time * factor, self.time_uom.rounding)
+        return self.time
