@@ -4,7 +4,7 @@ from trytond.pool import PoolMeta, Pool
 from trytond.pyson import Eval, If, Bool, Id
 from trytond.config import config
 from trytond.transaction import Transaction
-DIGITS = int(config.get('config', 'unit_price_digits', 4))
+DIGITS = config.getint('digits', 'unit_price_digits', 4)
 
 __all__ = ['WorkCenterCategory', 'WorkCenter', 'OperationType', 'Route',
     'RouteOperation']
