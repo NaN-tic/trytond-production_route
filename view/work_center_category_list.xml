@@ -3,5 +3,7 @@
      copyright notices and license terms. -->
 <tree string="Work Center Category">
     <field name="name"/>
+    <field name="uom"/>
+    <field name="cost_price"/>
     <field name="active" tree_invisible="1"/>
 </tree>
