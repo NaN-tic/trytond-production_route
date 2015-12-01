@@ -162,9 +162,9 @@ class RouteOperation(ModelSQL, ModelView):
             },
         domain=[
             If(Bool(Eval('quantity_uom_category', 0)),
-            ('category', '=', Eval('quantity_uom_category')),
-            (),
-            )],
+                ('category', '=', Eval('quantity_uom_category')),
+                ()),
+            ],
         depends=['quantity_uom_category'])
     calculation = fields.Selection([
             ('standard', 'Standard'),
