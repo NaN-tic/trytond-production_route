@@ -2,9 +2,8 @@ from decimal import Decimal
 from trytond.model import fields, ModelSQL, ModelView
 from trytond.pool import PoolMeta, Pool
 from trytond.pyson import Eval, If, Bool, Id
-from trytond.config import config
 from trytond.transaction import Transaction
-DIGITS = config.getint('digits', 'unit_price_digits', 4)
+from trytond.modules.product import price_digits
 
 __all__ = ['WorkCenterCategory', 'WorkCenter', 'OperationType', 'Route',
     'RouteOperation']
@@ -16,7 +15,7 @@ class WorkCenterCategory(ModelSQL, ModelView):
     __name__ = 'production.work_center.category'
 
     name = fields.Char('Name', required=True)
-    cost_price = fields.Numeric('Cost Price', digits=(16, DIGITS),
+    cost_price = fields.Numeric('Cost Price', digits=price_digits,
         required=True)
     uom = fields.Many2One('product.uom', 'Uom', required=True, domain=[
             ('category', '=', Id('product', 'uom_cat_time')),
@@ -53,7 +52,7 @@ class WorkCenter(ModelSQL, ModelView):
             'invisible': Eval('type') != 'employee',
             'required': Eval('type') == 'employee',
             }, depends=['type'])
-    cost_price = fields.Numeric('Cost Price', digits=(16, DIGITS),
+    cost_price = fields.Numeric('Cost Price', digits=price_digits,
         required=True)
     uom = fields.Many2One('product.uom', 'Uom', required=True,
         domain=[
