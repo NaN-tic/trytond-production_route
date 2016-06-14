@@ -182,6 +182,10 @@ class RouteOperation(ModelSQL, ModelView):
         'on_change_with_quantity_uom_category')
     notes = fields.Text('Notes')
 
+    def get_rec_name(self, name):
+        if self.operation_type:
+            return self.operation_type.name
+
     @staticmethod
     def default_calculation():
         return 'standard'
