@@ -25,6 +25,13 @@
             <field name="view" ref="production_route_operation_view_form"/>
             <field name="act_window" ref="act_production_route_operation"/>
         </record>
+        <record model="ir.model.access" id="default_access_production_route_operation">
+            <field name="model" search="[('model', '=', 'production.route.operation')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
         <record model="ir.model.access" id="access_production_route_operation">
             <field name="model" search="[('model', '=', 'production.route.operation')]"/>
             <field name="group" ref="production.group_production"/>
@@ -65,6 +72,13 @@
             <field name="view" ref="production_work_center_view_form"/>
             <field name="act_window" ref="act_production_work_center"/>
         </record>
+        <record model="ir.model.access" id="default_access_production_work_center">
+            <field name="model" search="[('model', '=', 'production.work_center')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
         <record model="ir.model.access" id="access_production_work_center">
             <field name="model" search="[('model', '=', 'production.work_center')]"/>
             <field name="group" ref="production.group_production"/>
@@ -104,6 +118,13 @@
             <field name="sequence" eval="20"/>
             <field name="view" ref="production_work_center_category_view_form"/>
             <field name="act_window" ref="act_production_work_center_category"/>
+        </record>
+        <record model="ir.model.access" id="default_access_production_work_center_category">
+            <field name="model" search="[('model', '=', 'production.work_center.category')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_production_work_center_category">
             <field name="model" search="[('model', '=', 'production.work_center.category')]"/>
@@ -152,6 +173,13 @@
             <field name="view" ref="production_route_view_form"/>
             <field name="act_window" ref="act_production_route"/>
         </record>
+        <record model="ir.model.access" id="default_access_production_route">
+            <field name="model" search="[('model', '=', 'production.route')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
         <record model="ir.model.access" id="access_production_route">
             <field name="model" search="[('model', '=', 'production.route')]"/>
             <field name="group" ref="production.group_production"/>
@@ -194,6 +222,14 @@
             <field name="sequence" eval="20"/>
             <field name="view" ref="production_operation_type_view_form"/>
             <field name="act_window" ref="act_production_operation_type"/>
+        </record>
+        <record model="ir.model.access" id="default_access_production_operation_type">
+            <field name="model"
+                search="[('model', '=', 'production.operation.type')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
         </record>
         <record model="ir.model.access" id="access_production_operation_type">
             <field name="model"
