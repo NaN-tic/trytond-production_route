@@ -74,29 +74,23 @@ class WorkCenter(ModelSQL, ModelView):
 
     @fields.depends('category', 'cost_price', 'uom')
     def on_change_category(self):
-        res = {
-            'uom': None,
-            'cost_price': None,
-            }
-        if not self.category:
-            return res
-        if not self.uom:
-            res['uom'] = self.category.uom.id
-            res['uom.rec_name'] = self.category.uom.rec_name
-        if not self.cost_price or self.cost_price == Decimal('0.0'):
-            res['cost_price'] = self.category.cost_price
-        return res
+        self.uom = None
+        self.cost_price = None
+
+        if self.category:
+            if not self.uom:
+                self.uom = self.category.uom.id
+                self.uom.rec_name = self.category.uom.rec_name
+            if not self.cost_price or self.cost_price == Decimal('0.0'):
+                self.cost_price = self.category.cost_price
 
     @fields.depends('employee')
     def on_change_employee(self):
         ModelData = Pool().get('ir.model.data')
         # Check employee is not empty and timesheet_cost module is installed
-        if not self.employee or not hasattr(self.employee, 'cost_price'):
-            return {}
-        return {
-            'cost_price': self.employee.cost_price,
-            'uom': ModelData.get_id('product', 'uom_hour'),
-            }
+        if self.employee and hasattr(self.employee, 'cost_price'):
+            self.cost_price = self.employee.cost_price
+            self.uom = ModelData.get_id('product', 'uom_hour')
 
 
 class OperationType(ModelSQL, ModelView):
