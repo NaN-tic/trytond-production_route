@@ -1,42 +1,210 @@
-# 
+#
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
-msgctxt "field:production.bom,route:"
+msgctxt "field:product.product-production.bom,route:"
 msgid "Route"
 msgstr "Ruta"
+
+msgctxt "field:production.operation.type,create_date:"
+msgid "Create Date"
+msgstr "Fecha creación"
+
+msgctxt "field:production.operation.type,create_uid:"
+msgid "Create User"
+msgstr "Usuario creación"
+
+msgctxt "field:production.operation.type,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:production.operation.type,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:production.operation.type,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:production.operation.type,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:production.operation.type,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
 
 msgctxt "field:production.route,active:"
 msgid "Active"
 msgstr "Activo"
 
+msgctxt "field:production.route,create_date:"
+msgid "Create Date"
+msgstr "Fecha creación"
+
+msgctxt "field:production.route,create_uid:"
+msgid "Create User"
+msgstr "Usuario creación"
+
+msgctxt "field:production.route,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:production.route,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:production.route,operations:"
+msgid "Operations"
+msgstr "Operaciones"
+
+msgctxt "field:production.route,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:production.route,uom:"
+msgid "UOM"
+msgstr "UdM"
+
+msgctxt "field:production.route,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:production.route,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:production.route.operation,calculation:"
+msgid "Calculation"
+msgstr "Cálculo"
+
+msgctxt "field:production.route.operation,create_date:"
+msgid "Create Date"
+msgstr "Fecha creación"
+
+msgctxt "field:production.route.operation,create_uid:"
+msgid "Create User"
+msgstr "Usuario creación"
+
+msgctxt "field:production.route.operation,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:production.route.operation,notes:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "field:production.route.operation,operation_type:"
+msgid "Operation Type"
+msgstr "Tipo de operación"
+
 msgctxt "field:production.route.operation,quantity:"
 msgid "Quantity"
 msgstr "Cantidad"
 
-msgctxt "field:production.route.operation,unit_digits:"
-msgid "Unit Digits"
-msgstr "Dígitos unidad"
+msgctxt "field:production.route.operation,quantity_uom:"
+msgid "Quantity UOM"
+msgstr "UdM cantidad"
 
-msgctxt "field:production.route.operation,uom:"
-msgid "Uom"
-msgstr "UdM"
+msgctxt "field:production.route.operation,quantity_uom_category:"
+msgid "Quantity UOM Category"
+msgstr "Categoría UdM cantidad"
 
-msgctxt "field:production.route.operation,uom_category:"
-msgid "Uom Category"
-msgstr "Categoría de UdM"
+msgctxt "field:production.route.operation,quantity_uom_digits:"
+msgid "Quantity UOM Digits"
+msgstr "Dígitos UdM cantidad"
+
+msgctxt "field:production.route.operation,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:production.route.operation,route:"
+msgid "Route"
+msgstr "Ruta"
+
+msgctxt "field:production.route.operation,sequence:"
+msgid "Sequence"
+msgstr "Secuencia"
+
+msgctxt "field:production.route.operation,time:"
+msgid "Time"
+msgstr "Tiempo"
+
+msgctxt "field:production.route.operation,time_uom:"
+msgid "Time UOM"
+msgstr "UdM tiempo"
+
+msgctxt "field:production.route.operation,time_uom_digits:"
+msgid "Time UOM Digits"
+msgstr "Dígitos UdM tiempo"
+
+msgctxt "field:production.route.operation,work_center:"
+msgid "Work Center"
+msgstr "Centro de trabajo"
 
 msgctxt "field:production.route.operation,work_center_category:"
 msgid "Work Center Category"
 msgstr "Categoria del centro de trabajo"
 
+msgctxt "field:production.route.operation,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:production.route.operation,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
 msgctxt "field:production.work_center,active:"
 msgid "Active"
 msgstr "Activo"
 
-msgctxt "field:production.work_center,uom_category:"
-msgid "Uom Category"
-msgstr "Categoría de UdM"
+msgctxt "field:production.work_center,category:"
+msgid "Category"
+msgstr "Categoría"
+
+msgctxt "field:production.work_center,cost_price:"
+msgid "Cost Price"
+msgstr "Precio de coste"
+
+msgctxt "field:production.work_center,create_date:"
+msgid "Create Date"
+msgstr "Fecha creación"
+
+msgctxt "field:production.work_center,create_uid:"
+msgid "Create User"
+msgstr "Usuario creación"
+
+msgctxt "field:production.work_center,employee:"
+msgid "Employee"
+msgstr "Empleado"
+
+msgctxt "field:production.work_center,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:production.work_center,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:production.work_center,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:production.work_center,type:"
+msgid "Type"
+msgstr "Tipo"
+
+msgctxt "field:production.work_center,uom:"
+msgid "Uom"
+msgstr "UdM"
+
+msgctxt "field:production.work_center,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:production.work_center,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
 
 msgctxt "field:production.work_center.category,active:"
 msgid "Active"
@@ -46,13 +214,53 @@ msgctxt "field:production.work_center.category,cost_price:"
 msgid "Cost Price"
 msgstr "Precio de coste"
 
+msgctxt "field:production.work_center.category,create_date:"
+msgid "Create Date"
+msgstr "Fecha creación"
+
+msgctxt "field:production.work_center.category,create_uid:"
+msgid "Create User"
+msgstr "Usuario creación"
+
+msgctxt "field:production.work_center.category,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:production.work_center.category,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:production.work_center.category,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
 msgctxt "field:production.work_center.category,uom:"
 msgid "Uom"
 msgstr "UdM"
 
-msgctxt "field:production.work_center.category,uom_category:"
-msgid "Uom Category"
-msgstr "Categoría de UdM"
+msgctxt "field:production.work_center.category,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:production.work_center.category,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "help:production.route.operation,calculation:"
+msgid ""
+"Use Standard to multiply the amount of time by the number of units produced."
+" Use Fixed to use the indicated time in the production without considering "
+"the quantities produced. The latter is useful for a setup or cleaning "
+"operation, for example."
+msgstr ""
+"Usa la opción estándar para multiplicar el total de tiempo por el número de "
+"unidades producidas. O bien utiliza la opción fijo para indicar el tiempo de"
+" producción sin considerar la cantidad de producciones. Este último es útil "
+"para iniciar o limpiar las operaciones."
+
+msgctxt "help:production.route.operation,quantity:"
+msgid "Quantity of the production product processed by the specified time."
+msgstr "Cantidad de producto producido procesado por un tiempo específico."
 
 msgctxt "model:ir.action,name:act_production_operation_type"
 msgid "Operation Types"
@@ -89,6 +297,42 @@ msgstr "Centros de trabajo"
 msgctxt "model:ir.ui.menu,name:menu_production_work_center_category"
 msgid "Work Center Categories"
 msgstr "Categorias del centros de trabajo"
+
+msgctxt "model:production.operation.type,name:"
+msgid "Operation Type"
+msgstr "Tipo de operación"
+
+msgctxt "model:production.route,name:"
+msgid "Production Route"
+msgstr "Ruta producción"
+
+msgctxt "model:production.route.operation,name:"
+msgid "Route Operation"
+msgstr "Ruta de operación"
+
+msgctxt "model:production.work_center,name:"
+msgid "Work Center"
+msgstr "Centro de trabajo"
+
+msgctxt "model:production.work_center.category,name:"
+msgid "Work Center Category"
+msgstr "Categoria del centro de trabajo"
+
+msgctxt "selection:production.route.operation,calculation:"
+msgid "Fixed"
+msgstr "Fijo"
+
+msgctxt "selection:production.route.operation,calculation:"
+msgid "Standard"
+msgstr "Stándard"
+
+msgctxt "selection:production.work_center,type:"
+msgid "Employee"
+msgstr "Empleado"
+
+msgctxt "selection:production.work_center,type:"
+msgid "Machine"
+msgstr "Máquina"
 
 msgctxt "view:production.operation.type:"
 msgid "Operation Type"
