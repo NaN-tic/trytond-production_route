@@ -112,7 +112,7 @@ msgstr "Categoría UdM cantidad"
 
 msgctxt "field:production.route.operation,quantity_uom_digits:"
 msgid "Quantity UOM Digits"
-msgstr "Dígitos UdM cantidad"
+msgstr "Decimales UdM cantidad"
 
 msgctxt "field:production.route.operation,rec_name:"
 msgid "Name"
@@ -136,7 +136,7 @@ msgstr "UdM tiempo"
 
 msgctxt "field:production.route.operation,time_uom_digits:"
 msgid "Time UOM Digits"
-msgstr "Dígitos UdM tiempo"
+msgstr "Decimales UdM tiempo"
 
 msgctxt "field:production.route.operation,work_center:"
 msgid "Work Center"
@@ -144,7 +144,7 @@ msgstr "Centro de trabajo"
 
 msgctxt "field:production.route.operation,work_center_category:"
 msgid "Work Center Category"
-msgstr "Categoria del centro de trabajo"
+msgstr "Categoría del centro de trabajo"
 
 msgctxt "field:production.route.operation,write_date:"
 msgid "Write Date"
@@ -280,7 +280,7 @@ msgstr "Centro de trabajo"
 
 msgctxt "model:ir.action,name:act_production_work_center_category"
 msgid "Work Center Category"
-msgstr "Categoria del centro de trabajo"
+msgstr "Categoría del centro de trabajo"
 
 msgctxt "model:ir.ui.menu,name:menu_production_operation_type"
 msgid "Operation Types"
@@ -316,7 +316,7 @@ msgstr "Centro de trabajo"
 
 msgctxt "model:production.work_center.category,name:"
 msgid "Work Center Category"
-msgstr "Categoria del centro de trabajo"
+msgstr "Categoría del centro de trabajo"
 
 msgctxt "selection:production.route.operation,calculation:"
 msgid "Fixed"
@@ -348,7 +348,7 @@ msgstr "Ruta"
 
 msgctxt "view:production.work_center.category:"
 msgid "Work Center Category"
-msgstr "Categoria del centro de trabajo"
+msgstr "Categoría del centro de trabajo"
 
 msgctxt "view:production.work_center:"
 msgid "Work Center"

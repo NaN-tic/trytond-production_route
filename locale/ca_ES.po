@@ -112,7 +112,7 @@ msgstr "Categoria UdM quantitat"
 
 msgctxt "field:production.route.operation,quantity_uom_digits:"
 msgid "Quantity UOM Digits"
-msgstr "Dígits UdM quantitat"
+msgstr "Decimals UdM quantitat"
 
 msgctxt "field:production.route.operation,rec_name:"
 msgid "Name"
@@ -136,7 +136,7 @@ msgstr "UdM temps"
 
 msgctxt "field:production.route.operation,time_uom_digits:"
 msgid "Time UOM Digits"
-msgstr "Dígits UdM temps"
+msgstr "Decimals UdM temps"
 
 msgctxt "field:production.route.operation,work_center:"
 msgid "Work Center"
