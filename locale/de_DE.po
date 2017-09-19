@@ -1,0 +1,353 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:product.product-production.bom,route:"
+msgid "Route"
+msgstr "Fertigungsablauf"
+
+msgctxt "field:production.operation.type,create_date:"
+msgid "Create Date"
+msgstr "Erstellungsdatum"
+
+msgctxt "field:production.operation.type,create_uid:"
+msgid "Create User"
+msgstr "Erstellt durch"
+
+msgctxt "field:production.operation.type,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:production.operation.type,name:"
+msgid "Name"
+msgstr "Name"
+
+msgctxt "field:production.operation.type,rec_name:"
+msgid "Name"
+msgstr "Name"
+
+msgctxt "field:production.operation.type,write_date:"
+msgid "Write Date"
+msgstr "Zuletzt geändert"
+
+msgctxt "field:production.operation.type,write_uid:"
+msgid "Write User"
+msgstr "Letzte Änderung durch"
+
+msgctxt "field:production.route,active:"
+msgid "Active"
+msgstr "Aktiv"
+
+msgctxt "field:production.route,create_date:"
+msgid "Create Date"
+msgstr "Erstellungsdatum"
+
+msgctxt "field:production.route,create_uid:"
+msgid "Create User"
+msgstr "Erstellt durch"
+
+msgctxt "field:production.route,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:production.route,name:"
+msgid "Name"
+msgstr "Name"
+
+msgctxt "field:production.route,operations:"
+msgid "Operations"
+msgstr "Arbeitsgänge"
+
+msgctxt "field:production.route,rec_name:"
+msgid "Name"
+msgstr "Name"
+
+msgctxt "field:production.route,uom:"
+msgid "UOM"
+msgstr "Maßeinheit"
+
+msgctxt "field:production.route,write_date:"
+msgid "Write Date"
+msgstr "Zuletzt geändert"
+
+msgctxt "field:production.route,write_uid:"
+msgid "Write User"
+msgstr "Letzte Änderung durch"
+
+msgctxt "field:production.route.operation,calculation:"
+msgid "Calculation"
+msgstr "Kalkulation"
+
+msgctxt "field:production.route.operation,create_date:"
+msgid "Create Date"
+msgstr "Erstellungsdatum"
+
+msgctxt "field:production.route.operation,create_uid:"
+msgid "Create User"
+msgstr "Erstellt durch"
+
+msgctxt "field:production.route.operation,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:production.route.operation,notes:"
+msgid "Notes"
+msgstr "Notizen"
+
+msgctxt "field:production.route.operation,operation_type:"
+msgid "Operation Type"
+msgstr "Arbeitsgangtyp"
+
+msgctxt "field:production.route.operation,quantity:"
+msgid "Quantity"
+msgstr "Anzahl"
+
+msgctxt "field:production.route.operation,quantity_uom:"
+msgid "Quantity UOM"
+msgstr "Maßeinheit"
+
+msgctxt "field:production.route.operation,quantity_uom_category:"
+msgid "Quantity UOM Category"
+msgstr "Maßeinheitenkategorie "
+
+msgctxt "field:production.route.operation,quantity_uom_digits:"
+msgid "Quantity UOM Digits"
+msgstr "Nachkommastellen"
+
+msgctxt "field:production.route.operation,rec_name:"
+msgid "Name"
+msgstr "Name"
+
+msgctxt "field:production.route.operation,route:"
+msgid "Route"
+msgstr "Fertigungsablauf"
+
+msgctxt "field:production.route.operation,sequence:"
+msgid "Sequence"
+msgstr "Reihenfolge"
+
+msgctxt "field:production.route.operation,time:"
+msgid "Time"
+msgstr "Zeit"
+
+msgctxt "field:production.route.operation,time_uom:"
+msgid "Time UOM"
+msgstr "Zeitmaßeinheit"
+
+msgctxt "field:production.route.operation,time_uom_digits:"
+msgid "Time UOM Digits"
+msgstr "Nachkommastellen"
+
+msgctxt "field:production.route.operation,work_center:"
+msgid "Work Center"
+msgstr "Arbeitsplatz"
+
+msgctxt "field:production.route.operation,work_center_category:"
+msgid "Work Center Category"
+msgstr "Arbeitsplatzkategorie"
+
+msgctxt "field:production.route.operation,write_date:"
+msgid "Write Date"
+msgstr "Zuletzt geändert"
+
+msgctxt "field:production.route.operation,write_uid:"
+msgid "Write User"
+msgstr "Letzte Änderung durch"
+
+msgctxt "field:production.work_center,active:"
+msgid "Active"
+msgstr "Aktiv"
+
+msgctxt "field:production.work_center,category:"
+msgid "Category"
+msgstr "Kategorie"
+
+msgctxt "field:production.work_center,cost_price:"
+msgid "Cost Price"
+msgstr "Kostenpreis"
+
+msgctxt "field:production.work_center,create_date:"
+msgid "Create Date"
+msgstr "Erstellungsdatum"
+
+msgctxt "field:production.work_center,create_uid:"
+msgid "Create User"
+msgstr "Erstellt durch"
+
+msgctxt "field:production.work_center,employee:"
+msgid "Employee"
+msgstr "Mitarbeiter"
+
+msgctxt "field:production.work_center,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:production.work_center,name:"
+msgid "Name"
+msgstr "Name"
+
+msgctxt "field:production.work_center,rec_name:"
+msgid "Name"
+msgstr "Name"
+
+msgctxt "field:production.work_center,type:"
+msgid "Type"
+msgstr "Typ"
+
+msgctxt "field:production.work_center,uom:"
+msgid "Uom"
+msgstr "Maßeinheit"
+
+msgctxt "field:production.work_center,write_date:"
+msgid "Write Date"
+msgstr "Zuletzt geändert"
+
+msgctxt "field:production.work_center,write_uid:"
+msgid "Write User"
+msgstr "Letzte Änderung durch"
+
+msgctxt "field:production.work_center.category,active:"
+msgid "Active"
+msgstr "Aktiv"
+
+msgctxt "field:production.work_center.category,cost_price:"
+msgid "Cost Price"
+msgstr "Kostenpreis"
+
+msgctxt "field:production.work_center.category,create_date:"
+msgid "Create Date"
+msgstr "Erstellungsdatum"
+
+msgctxt "field:production.work_center.category,create_uid:"
+msgid "Create User"
+msgstr "Erstellt durch"
+
+msgctxt "field:production.work_center.category,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:production.work_center.category,name:"
+msgid "Name"
+msgstr "Name"
+
+msgctxt "field:production.work_center.category,rec_name:"
+msgid "Name"
+msgstr "Name"
+
+msgctxt "field:production.work_center.category,uom:"
+msgid "Uom"
+msgstr "Maßeinheit"
+
+msgctxt "field:production.work_center.category,write_date:"
+msgid "Write Date"
+msgstr "Zuletzt geändert"
+
+msgctxt "field:production.work_center.category,write_uid:"
+msgid "Write User"
+msgstr "Letzte Änderung durch"
+
+msgctxt "help:production.route.operation,calculation:"
+msgid ""
+"Use Standard to multiply the amount of time by the number of units produced."
+" Use Fixed to use the indicated time in the production without considering "
+"the quantities produced. The latter is useful for a setup or cleaning "
+"operation, for example."
+msgstr ""
+"Standard: Zeitaufwand multipliziert mit der Anzahl der hergestellten Einheiten.\n"
+"Fix: Berechnung anhand der in der Produktion erfassten Zeit ohne Berücksichtigung der hergestellten Anzahl (z.B. für Rüstzeiten oder Reinigungsaufgaben)."
+
+msgctxt "help:production.route.operation,quantity:"
+msgid "Quantity of the production product processed by the specified time."
+msgstr "Menge des erzeugten Produktes in der angegebenen Zeit."
+
+msgctxt "model:ir.action,name:act_production_operation_type"
+msgid "Operation Types"
+msgstr "Arbeitsgangtypen"
+
+msgctxt "model:ir.action,name:act_production_route"
+msgid "Route"
+msgstr "Fertigungsablauf"
+
+msgctxt "model:ir.action,name:act_production_route_operation"
+msgid "Route Operation"
+msgstr "Arbeitsgang"
+
+msgctxt "model:ir.action,name:act_production_work_center"
+msgid "Work Center"
+msgstr "Arbeitsplatz"
+
+msgctxt "model:ir.action,name:act_production_work_center_category"
+msgid "Work Center Category"
+msgstr "Arbeitsplatzkategorie"
+
+msgctxt "model:ir.ui.menu,name:menu_production_operation_type"
+msgid "Operation Types"
+msgstr "Arbeitsgangtypen"
+
+msgctxt "model:ir.ui.menu,name:menu_production_route"
+msgid "Routes"
+msgstr "Fertigungsabläufe"
+
+msgctxt "model:ir.ui.menu,name:menu_production_work_center"
+msgid "Work Centers"
+msgstr "Arbeitsplätze"
+
+msgctxt "model:ir.ui.menu,name:menu_production_work_center_category"
+msgid "Work Center Categories"
+msgstr "Arbeitsplatzkategorien"
+
+msgctxt "model:production.operation.type,name:"
+msgid "Operation Type"
+msgstr "Arbeitsgangtyp"
+
+msgctxt "model:production.route,name:"
+msgid "Production Route"
+msgstr "Fertigungsablauf"
+
+msgctxt "model:production.route.operation,name:"
+msgid "Route Operation"
+msgstr "Arbeitsgang"
+
+msgctxt "model:production.work_center,name:"
+msgid "Work Center"
+msgstr "Arbeitsplatz"
+
+msgctxt "model:production.work_center.category,name:"
+msgid "Work Center Category"
+msgstr "Arbeitsplatzkategorie"
+
+msgctxt "selection:production.route.operation,calculation:"
+msgid "Fixed"
+msgstr "Fix"
+
+msgctxt "selection:production.route.operation,calculation:"
+msgid "Standard"
+msgstr "Standard"
+
+msgctxt "selection:production.work_center,type:"
+msgid "Employee"
+msgstr "Mitarbeiter"
+
+msgctxt "selection:production.work_center,type:"
+msgid "Machine"
+msgstr "Maschine"
+
+msgctxt "view:production.operation.type:"
+msgid "Operation Type"
+msgstr "Arbeitsgangtyp"
+
+msgctxt "view:production.route.operation:"
+msgid "Route Operation"
+msgstr "Arbeitsgang"
+
+msgctxt "view:production.route:"
+msgid "Route"
+msgstr "Fertigungsablauf"
+
+msgctxt "view:production.work_center.category:"
+msgid "Work Center Category"
+msgstr "Arbeitsplatzkategorie"
+
+msgctxt "view:production.work_center:"
+msgid "Work Center"
+msgstr "Arbeitsplatz"
