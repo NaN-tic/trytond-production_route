@@ -1,13 +1,12 @@
 from decimal import Decimal
-from trytond.model import fields, ModelSQL, ModelView
-from trytond.pool import PoolMeta, Pool
+from trytond.model import fields, ModelSQL, ModelView, sequence_ordered
+from trytond.pool import Pool
 from trytond.pyson import Eval, If, Bool, Id
 from trytond.transaction import Transaction
 from trytond.modules.product import price_digits
 
 __all__ = ['WorkCenterCategory', 'WorkCenter', 'OperationType', 'Route',
     'RouteOperation']
-__metaclass__ = PoolMeta
 
 
 class WorkCenterCategory(ModelSQL, ModelView):
@@ -116,13 +115,12 @@ class Route(ModelSQL, ModelView):
         return True
 
 
-class RouteOperation(ModelSQL, ModelView):
+class RouteOperation(sequence_ordered(), ModelSQL, ModelView):
     'Route Operation'
     __name__ = 'production.route.operation'
 
     route = fields.Many2One('production.route', 'Route', required=True,
         ondelete='CASCADE')
-    sequence = fields.Integer('Sequence')
     operation_type = fields.Many2One('production.operation.type',
         'Operation Type', required=True)
     work_center_category = fields.Many2One('production.work_center.category',
@@ -178,16 +176,6 @@ class RouteOperation(ModelSQL, ModelView):
     @staticmethod
     def default_calculation():
         return 'standard'
-
-    @classmethod
-    def __setup__(cls):
-        super(RouteOperation, cls).__setup__()
-        cls._order.insert(0, ('sequence', 'ASC'))
-
-    @staticmethod
-    def order_sequence(tables):
-        table, _ = tables[None]
-        return [table.sequence == None, table.sequence]
 
     @staticmethod
     def default_quantity_uom_category():
