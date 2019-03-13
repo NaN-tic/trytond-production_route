@@ -192,7 +192,7 @@ class RouteOperation(sequence_ordered(), ModelSQL, ModelView):
             quantity = Uom.compute_qty(uom, quantity, to_uom=self.quantity_uom,
                 round=False)
             factor = quantity / self.quantity
-            return Uom.round(self.time * factor, self.time_uom.rounding)
+            return self.time_uom.round(self.time * factor)
         return self.time
 
     @fields.depends('route')
