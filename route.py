@@ -186,6 +186,15 @@ class RouteOperation(sequence_ordered(), ModelSQL, ModelView):
             route_uom = Uom(context['route_uom'])
             return route_uom.category.id
 
+    def compute_time(self, quantity, uom):
+        Uom = Pool().get('product.uom')
+        if self.calculation == 'standard':
+            quantity = Uom.compute_qty(uom, quantity, to_uom=self.quantity_uom,
+                round=False)
+            factor = quantity / self.quantity
+            return Uom.round(self.time * factor, self.time_uom.rounding)
+        return self.time
+
     @fields.depends('route')
     def on_change_with_quantity_uom_category(self, name=None):
         if self.route and self.route.uom:
