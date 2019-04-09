@@ -8,11 +8,11 @@ msgstr "Ruta"
 
 msgctxt "field:production.operation.type,create_date:"
 msgid "Create Date"
-msgstr "Fecha creación"
+msgstr "Fecha de creación"
 
 msgctxt "field:production.operation.type,create_uid:"
 msgid "Create User"
-msgstr "Usuario creación"
+msgstr "Usuario de creación"
 
 msgctxt "field:production.operation.type,id:"
 msgid "ID"
@@ -23,16 +23,16 @@ msgid "Name"
 msgstr "Nombre"
 
 msgctxt "field:production.operation.type,rec_name:"
-msgid "Name"
+msgid "Record Name"
 msgstr "Nombre"
 
 msgctxt "field:production.operation.type,write_date:"
 msgid "Write Date"
-msgstr "Fecha modificación"
+msgstr "Fecha de modificación"
 
 msgctxt "field:production.operation.type,write_uid:"
 msgid "Write User"
-msgstr "Usuario modificación"
+msgstr "Usuario de modificación"
 
 msgctxt "field:production.route,active:"
 msgid "Active"
@@ -40,11 +40,11 @@ msgstr "Activo"
 
 msgctxt "field:production.route,create_date:"
 msgid "Create Date"
-msgstr "Fecha creación"
+msgstr "Fecha de creación"
 
 msgctxt "field:production.route,create_uid:"
 msgid "Create User"
-msgstr "Usuario creación"
+msgstr "Usuario de creación"
 
 msgctxt "field:production.route,id:"
 msgid "ID"
@@ -59,7 +59,7 @@ msgid "Operations"
 msgstr "Operaciones"
 
 msgctxt "field:production.route,rec_name:"
-msgid "Name"
+msgid "Record Name"
 msgstr "Nombre"
 
 msgctxt "field:production.route,uom:"
@@ -68,11 +68,11 @@ msgstr "UdM"
 
 msgctxt "field:production.route,write_date:"
 msgid "Write Date"
-msgstr "Fecha modificación"
+msgstr "Fecha de modificación"
 
 msgctxt "field:production.route,write_uid:"
 msgid "Write User"
-msgstr "Usuario modificación"
+msgstr "Usuario de modificación"
 
 msgctxt "field:production.route.operation,calculation:"
 msgid "Calculation"
@@ -80,11 +80,11 @@ msgstr "Cálculo"
 
 msgctxt "field:production.route.operation,create_date:"
 msgid "Create Date"
-msgstr "Fecha creación"
+msgstr "Fecha de creación"
 
 msgctxt "field:production.route.operation,create_uid:"
 msgid "Create User"
-msgstr "Usuario creación"
+msgstr "Usuario de creación"
 
 msgctxt "field:production.route.operation,id:"
 msgid "ID"
@@ -115,7 +115,7 @@ msgid "Quantity UOM Digits"
 msgstr "Decimales UdM cantidad"
 
 msgctxt "field:production.route.operation,rec_name:"
-msgid "Name"
+msgid "Record Name"
 msgstr "Nombre"
 
 msgctxt "field:production.route.operation,route:"
@@ -148,11 +148,11 @@ msgstr "Categoría del centro de trabajo"
 
 msgctxt "field:production.route.operation,write_date:"
 msgid "Write Date"
-msgstr "Fecha modificación"
+msgstr "Fecha de modificación"
 
 msgctxt "field:production.route.operation,write_uid:"
 msgid "Write User"
-msgstr "Usuario modificación"
+msgstr "Usuario de modificación"
 
 msgctxt "field:production.work_center,active:"
 msgid "Active"
@@ -168,11 +168,11 @@ msgstr "Precio de coste"
 
 msgctxt "field:production.work_center,create_date:"
 msgid "Create Date"
-msgstr "Fecha creación"
+msgstr "Fecha de creación"
 
 msgctxt "field:production.work_center,create_uid:"
 msgid "Create User"
-msgstr "Usuario creación"
+msgstr "Usuario de creación"
 
 msgctxt "field:production.work_center,employee:"
 msgid "Employee"
@@ -187,7 +187,7 @@ msgid "Name"
 msgstr "Nombre"
 
 msgctxt "field:production.work_center,rec_name:"
-msgid "Name"
+msgid "Record Name"
 msgstr "Nombre"
 
 msgctxt "field:production.work_center,type:"
@@ -200,11 +200,11 @@ msgstr "UdM"
 
 msgctxt "field:production.work_center,write_date:"
 msgid "Write Date"
-msgstr "Fecha modificación"
+msgstr "Fecha de modificación"
 
 msgctxt "field:production.work_center,write_uid:"
 msgid "Write User"
-msgstr "Usuario modificación"
+msgstr "Usuario de modificación"
 
 msgctxt "field:production.work_center.category,active:"
 msgid "Active"
@@ -216,11 +216,11 @@ msgstr "Precio de coste"
 
 msgctxt "field:production.work_center.category,create_date:"
 msgid "Create Date"
-msgstr "Fecha creación"
+msgstr "Fecha de creación"
 
 msgctxt "field:production.work_center.category,create_uid:"
 msgid "Create User"
-msgstr "Usuario creación"
+msgstr "Usuario de creación"
 
 msgctxt "field:production.work_center.category,id:"
 msgid "ID"
@@ -231,7 +231,7 @@ msgid "Name"
 msgstr "Nombre"
 
 msgctxt "field:production.work_center.category,rec_name:"
-msgid "Name"
+msgid "Record Name"
 msgstr "Nombre"
 
 msgctxt "field:production.work_center.category,uom:"
@@ -240,11 +240,11 @@ msgstr "UdM"
 
 msgctxt "field:production.work_center.category,write_date:"
 msgid "Write Date"
-msgstr "Fecha modificación"
+msgstr "Fecha de modificación"
 
 msgctxt "field:production.work_center.category,write_uid:"
 msgid "Write User"
-msgstr "Usuario modificación"
+msgstr "Usuario de modificación"
 
 msgctxt "help:production.route.operation,calculation:"
 msgid ""
