@@ -195,7 +195,7 @@ class RouteOperation(sequence_ordered(), ModelSQL, ModelView):
             return self.time_uom.round(self.time * factor)
         return self.time
 
-    @fields.depends('route')
+    @fields.depends('route', '_parent_route.uom')
     def on_change_with_quantity_uom_category(self, name=None):
         if self.route and self.route.uom:
             return self.route.uom.category.id
