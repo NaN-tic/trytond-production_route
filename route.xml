@@ -142,12 +142,6 @@
             <field name="perm_create" eval="True"/>
             <field name="perm_delete" eval="True"/>
         </record>
-        <record model="ir.ui.view" id="production_view_form">
-            <field name="model">production</field>
-            <field name="type" eval="None"/>
-            <field name="inherit" ref="production.production_view_form"/>
-            <field name="name">production_form</field>
-        </record>
 
         <record model="ir.ui.view" id="production_route_view_form">
             <field name="model">production.route</field>
