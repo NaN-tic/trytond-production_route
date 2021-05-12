@@ -182,7 +182,7 @@ class RouteOperation(sequence_ordered(), ModelSQL, ModelView):
         pool = Pool()
         Uom = pool.get('product.uom')
         context = Transaction().context
-        if 'route_uom' in context:
+        if context.get('route_uom'):
             route_uom = Uom(context['route_uom'])
             return route_uom.category.id
 
