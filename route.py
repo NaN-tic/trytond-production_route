@@ -1,5 +1,5 @@
 from decimal import Decimal
-from trytond.model import fields, ModelSQL, ModelView, sequence_ordered
+from trytond.model import DeactivableMixin, fields, ModelSQL, ModelView, sequence_ordered
 from trytond.pool import Pool
 from trytond.pyson import Eval, If, Bool, Id
 from trytond.transaction import Transaction
@@ -9,7 +9,7 @@ __all__ = ['WorkCenterCategory', 'WorkCenter', 'OperationType', 'Route',
     'RouteOperation']
 
 
-class WorkCenterCategory(ModelSQL, ModelView):
+class WorkCenterCategory(DeactivableMixin, ModelSQL, ModelView):
     'Work Center Category'
     __name__ = 'production.work_center.category'
 
@@ -19,11 +19,6 @@ class WorkCenterCategory(ModelSQL, ModelView):
     uom = fields.Many2One('product.uom', 'Uom', required=True, domain=[
             ('category', '=', Id('product', 'uom_cat_time')),
             ])
-    active = fields.Boolean('Active', select=True)
-
-    @staticmethod
-    def default_active():
-        return True
 
     @staticmethod
     def default_cost_price():
@@ -35,7 +30,7 @@ class WorkCenterCategory(ModelSQL, ModelView):
         return ModelData.get_id('product', 'uom_hour')
 
 
-class WorkCenter(ModelSQL, ModelView):
+class WorkCenter(DeactivableMixin, ModelSQL, ModelView):
     'Work Center'
     __name__ = 'production.work_center'
 
@@ -57,15 +52,10 @@ class WorkCenter(ModelSQL, ModelView):
         domain=[
             ('category', '=', Id('product', 'uom_cat_time')),
             ])
-    active = fields.Boolean('Active', select=True)
 
     @staticmethod
     def default_type():
         return 'machine'
-
-    @staticmethod
-    def default_active():
-        return True
 
     @staticmethod
     def default_cost_price():
@@ -98,21 +88,16 @@ class OperationType(ModelSQL, ModelView):
     name = fields.Char('Name', required=True)
 
 
-class Route(ModelSQL, ModelView):
+class Route(DeactivableMixin, ModelSQL, ModelView):
     'Production Route'
     __name__ = 'production.route'
 
     name = fields.Char('Name', required=True)
-    active = fields.Boolean('Active', select=True)
     operations = fields.One2Many('production.route.operation', 'route',
         'Operations', context={
             'route_uom': Eval('uom', 0),
             })
     uom = fields.Many2One('product.uom', 'UOM', required=True)
-
-    @staticmethod
-    def default_active():
-        return True
 
 
 class RouteOperation(sequence_ordered(), ModelSQL, ModelView):
