@@ -19,6 +19,20 @@ class WorkCenterCategory(DeactivableMixin, ModelSQL, ModelView):
     uom = fields.Many2One('product.uom', 'Uom', required=True, domain=[
             ('category', '=', Id('product', 'uom_cat_time')),
             ])
+    active = fields.Boolean('Active', select=True)
+
+    type = fields.Selection([
+        ('machine', 'Machine'),
+        ('employee', 'Employee'),
+        ], 'Type', required=True)
+
+    @staticmethod
+    def default_type():
+        return 'machine'
+
+    @staticmethod
+    def default_active():
+        return True
 
     @staticmethod
     def default_cost_price():
@@ -37,10 +51,10 @@ class WorkCenter(DeactivableMixin, ModelSQL, ModelView):
     name = fields.Char('Name', required=True)
     category = fields.Many2One('production.work_center.category', 'Category',
         required=True)
-    type = fields.Selection([
+    type = fields.Function(fields.Selection([
             ('machine', 'Machine'),
             ('employee', 'Employee'),
-            ], 'Type', required=True)
+            ], 'Type'), 'on_change_with_type')
     employee = fields.Many2One('company.employee', 'Employee',
         states={
             'invisible': Eval('type') != 'employee',
@@ -53,9 +67,10 @@ class WorkCenter(DeactivableMixin, ModelSQL, ModelView):
             ('category', '=', Id('product', 'uom_cat_time')),
             ])
 
-    @staticmethod
-    def default_type():
-        return 'machine'
+    @fields.depends('category')
+    def on_change_with_type(self, name=None):
+        if self.category and self.category.type:
+            return self.category.type
 
     @staticmethod
     def default_cost_price():
