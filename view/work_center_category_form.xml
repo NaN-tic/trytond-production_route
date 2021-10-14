@@ -11,4 +11,6 @@
         <field name="cost_price"/>
         <field name="uom"/>
     </group>
+    <label name="type"/>
+    <field name="type"/>
 </form>
