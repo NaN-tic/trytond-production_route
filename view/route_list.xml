@@ -4,5 +4,6 @@
 <tree>
     <field name="name"/>
     <field name="uom"/>
+    <field name="sequence"/>
     <field name="active" tree_invisible="1"/>
 </tree>

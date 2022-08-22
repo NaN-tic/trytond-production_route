@@ -8,5 +8,7 @@
     <field name="active"/>
     <label name="uom"/>
     <field name="uom"/>
+    <label name="sequence"/>
+    <field name="sequence"/>
     <field name="operations" colspan="4"/>
 </form>

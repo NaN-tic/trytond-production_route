@@ -1,5 +1,6 @@
 from decimal import Decimal
-from trytond.model import DeactivableMixin, fields, ModelSQL, ModelView, sequence_ordered
+from trytond.model import (DeactivableMixin, fields, ModelSQL, ModelView,
+    sequence_ordered)
 from trytond.pool import Pool
 from trytond.pyson import Eval, If, Bool, Id
 from trytond.transaction import Transaction
@@ -103,7 +104,7 @@ class OperationType(ModelSQL, ModelView):
     name = fields.Char('Name', required=True)
 
 
-class Route(DeactivableMixin, ModelSQL, ModelView):
+class Route(sequence_ordered(), DeactivableMixin, ModelSQL, ModelView):
     'Production Route'
     __name__ = 'production.route'
 
