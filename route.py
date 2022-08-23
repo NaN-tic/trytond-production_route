@@ -1,6 +1,6 @@
 from decimal import Decimal
 from trytond.model import DeactivableMixin, fields, ModelSQL, ModelView, sequence_ordered
-from trytond.pool import Pool
+from trytond.pool import Pool, PoolMeta
 from trytond.pyson import Eval, If, Bool, Id
 from trytond.transaction import Transaction
 from trytond.modules.product import price_digits
@@ -219,3 +219,10 @@ class RouteOperation(sequence_ordered(), ModelSQL, ModelView):
         if self.quantity_uom:
             return self.quantity_uom.digits
         return 2
+
+
+class RouteOperationSubcontract(metaclass=PoolMeta):
+    __name__ = 'production.route.operation'
+
+    subcontracted_product = fields.Many2One('product.product',
+        'Subcontracted product', domain=[('type', '=', 'service')])
