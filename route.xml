@@ -258,4 +258,17 @@
             sequence="30"
             name="Operation Types"/>
     </data>
+
+    <data depends='purchase_request'>
+        <record model="ir.ui.view" id="subcontract_production_route_operation_view_form">
+            <field name="model">production.route.operation</field>
+            <field name="inherit" ref="production_route.production_route_operation_view_form"/>
+            <field name="name">subcontract_route_operation_form</field>
+        </record>
+        <record model="ir.ui.view" id="subcontract_production_route_operation_view_list">
+            <field name="model">production.route.operation</field>
+            <field name="inherit" ref="production_route.production_route_operation_view_list"/>
+            <field name="name">subcontract_route_operation_list</field>
+        </record>
+    </data>
 </tryton>
