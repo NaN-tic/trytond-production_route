@@ -15,3 +15,8 @@ def register():
         route.RouteOperation,
         product.ProductBom,
         module='production_route', type_='model')
+    Pool.register(
+        route.RouteOperationSubcontract,
+        depends=['purchase_request'],
+        module='production_route', type_='model')
+
