@@ -19,7 +19,7 @@ class WorkCenterCategory(DeactivableMixin, ModelSQL, ModelView):
     uom = fields.Many2One('product.uom', 'Uom', required=True, domain=[
             ('category', '=', Id('product', 'uom_cat_time')),
             ])
-    active = fields.Boolean('Active', select=True)
+    active = fields.Boolean('Active')
 
     type = fields.Selection([
         ('machine', 'Machine'),
