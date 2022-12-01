@@ -1,12 +1,8 @@
-from trytond.model import ModelView, ModelSQL, fields
-# from trytond.pyson import Eval, Get, If, Bool
+from trytond.model import fields
 from trytond.pool import PoolMeta
 
-__all__ = ['ProductBom']
-__metaclass__ = PoolMeta
 
-
-class ProductBom(ModelSQL, ModelView):
+class ProductBom(metaclass=PoolMeta):
     __name__ = 'product.product-production.bom'
 
     # TODO: Add domain filter
