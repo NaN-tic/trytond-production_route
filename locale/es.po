@@ -10,10 +10,6 @@ msgctxt "field:production.operation.type,name:"
 msgid "Name"
 msgstr "Nombre"
 
-msgctxt "field:production.route,active:"
-msgid "Active"
-msgstr "Activo"
-
 msgctxt "field:production.route,name:"
 msgid "Name"
 msgstr "Nombre"
@@ -58,6 +54,10 @@ msgctxt "field:production.route.operation,route:"
 msgid "Route"
 msgstr "Ruta"
 
+msgctxt "field:production.route.operation,subcontracted_product:"
+msgid "Subcontracted product"
+msgstr "Producto subcontratado"
+
 msgctxt "field:production.route.operation,time:"
 msgid "Time"
 msgstr "Tiempo"
@@ -77,10 +77,6 @@ msgstr "Centro de trabajo"
 msgctxt "field:production.route.operation,work_center_category:"
 msgid "Work Center Category"
 msgstr "Categoría del centro de trabajo"
-
-msgctxt "field:production.work_center,active:"
-msgid "Active"
-msgstr "Activo"
 
 msgctxt "field:production.work_center,category:"
 msgid "Category"
@@ -105,10 +101,6 @@ msgstr "Tipo"
 msgctxt "field:production.work_center,uom:"
 msgid "Uom"
 msgstr "UdM"
-
-msgctxt "field:production.work_center.category,active:"
-msgid "Active"
-msgstr "Activo"
 
 msgctxt "field:production.work_center.category,cost_price:"
 msgid "Cost Price"
