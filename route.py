@@ -59,7 +59,7 @@ class WorkCenter(DeactivableMixin, ModelSQL, ModelView):
         states={
             'invisible': Eval('type') != 'employee',
             'required': Eval('type') == 'employee',
-            }, depends=['type'])
+            })
     cost_price = fields.Numeric('Cost Price', digits=price_digits,
         required=True)
     uom = fields.Many2One('product.uom', 'Uom', required=True,
@@ -128,9 +128,9 @@ class RouteOperation(sequence_ordered(), ModelSQL, ModelView):
     work_center = fields.Many2One('production.work_center', 'Work Center',
         domain=[
             ('category', '=', Eval('work_center_category'),
-            )], depends=['work_center_category'])
+            )])
     time = fields.Float('Time', required=True,
-        digits=(16, Eval('time_uom_digits', 2)), depends=['time_uom_digits'])
+        digits=(16, Eval('time_uom_digits', 2)))
     time_uom = fields.Many2One('product.uom', 'Time UOM', required=True,
         domain=[
             ('category', '=', Id('product', 'uom_cat_time')),
@@ -143,7 +143,6 @@ class RouteOperation(sequence_ordered(), ModelSQL, ModelView):
             'invisible': Eval('calculation') != 'standard',
             },
         digits=(16, Eval('quantity_uom_digits', 2)),
-        depends=['quantity_uom_digits', 'calculation'],
         help='Quantity of the production product processed by the specified '
         'time.')
     quantity_uom = fields.Many2One('product.uom', 'Quantity UOM',
@@ -155,8 +154,7 @@ class RouteOperation(sequence_ordered(), ModelSQL, ModelView):
             If(Bool(Eval('quantity_uom_category', 0)),
                 ('category', '=', Eval('quantity_uom_category')),
                 ()),
-            ],
-        depends=['quantity_uom_category'])
+            ])
     calculation = fields.Selection([
             ('standard', 'Standard'),
             ('fixed', 'Fixed'),
