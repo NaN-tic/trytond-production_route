@@ -9,4 +9,4 @@ class ProductBom(metaclass=PoolMeta):
     route = fields.Many2One('production.route', 'Route', ondelete='SET NULL')
     #    domain=[
     #        ('uom', '=', Get(Eval('_parent_product', {}), 'default_uom', 0)),
-    #        ], depends=['product']
+    #        ]
