@@ -67,14 +67,24 @@ class WorkCenter(DeactivableMixin, ModelSQL, ModelView):
             ('category', '=', Id('product', 'uom_cat_time')),
             ])
 
-    @fields.depends('category')
-    def on_change_with_type(self, name=None):
-        if self.category and self.category.type:
-            return self.category.type
+    @classmethod
+    def __register__(cls, module_name):
+        table = cls.__table_handler__(module_name)
+
+        # Migration from 6.4: remove type field that is function field
+        if table.column_exist('type'):
+            table.drop_column('type')
+
+        super(WorkCenter, cls).__register__(module_name)
 
     @staticmethod
     def default_cost_price():
         return Decimal('0.0')
+
+    @fields.depends('category')
+    def on_change_with_type(self, name=None):
+        if self.category and self.category.type:
+            return self.category.type
 
     @fields.depends('category', 'cost_price', 'uom')
     def on_change_category(self):
