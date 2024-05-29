@@ -36,7 +36,7 @@ class WorkCenterCategory(DeactivableMixin, ModelSQL, ModelView):
 
     @staticmethod
     def default_cost_price():
-        return Decimal('0.0')
+        return Decimal(0)
 
     @staticmethod
     def default_uom():
@@ -79,7 +79,7 @@ class WorkCenter(DeactivableMixin, ModelSQL, ModelView):
 
     @staticmethod
     def default_cost_price():
-        return Decimal('0.0')
+        return Decimal(0)
 
     @fields.depends('category')
     def on_change_with_type(self, name=None):
@@ -95,7 +95,7 @@ class WorkCenter(DeactivableMixin, ModelSQL, ModelView):
             if not self.uom:
                 self.uom = self.category.uom.id
                 self.uom.rec_name = self.category.uom.rec_name
-            if not self.cost_price or self.cost_price == Decimal('0.0'):
+            if not self.cost_price or self.cost_price == Decimal(0):
                 self.cost_price = self.category.cost_price
 
     @fields.depends('employee')
