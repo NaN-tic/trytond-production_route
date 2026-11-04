@@ -1,0 +1,240 @@
+#
+msgid ""
+msgstr ""
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgctxt "field:product.product-production.bom,route:"
+msgid "Route"
+msgstr "工艺路线"
+
+msgctxt "field:production.operation.type,name:"
+msgid "Name"
+msgstr "名称"
+
+msgctxt "field:production.route,name:"
+msgid "Name"
+msgstr "名称"
+
+msgctxt "field:production.route,operations:"
+msgid "Operations"
+msgstr "交易"
+
+msgctxt "field:production.route,uom:"
+msgid "UOM"
+msgstr "计量单位"
+
+msgctxt "field:production.route.operation,calculation:"
+msgid "Calculation"
+msgstr "计算"
+
+msgctxt "field:production.route.operation,notes:"
+msgid "Notes"
+msgstr "注释"
+
+msgctxt "field:production.route.operation,operation_type:"
+msgid "Operation Type"
+msgstr "交易类型"
+
+msgctxt "field:production.route.operation,quantity:"
+msgid "Quantity"
+msgstr "数量"
+
+msgctxt "field:production.route.operation,quantity_uom:"
+msgid "Quantity UOM"
+msgstr "数量计量单位"
+
+msgctxt "field:production.route.operation,quantity_uom_category:"
+msgid "Quantity UOM Category"
+msgstr "数量计量单位类别"
+
+msgctxt "field:production.route.operation,quantity_uom_digits:"
+msgid "Quantity UOM Digits"
+msgstr "数量计量单位小数位数"
+
+msgctxt "field:production.route.operation,route:"
+msgid "Route"
+msgstr "工艺路线"
+
+msgctxt "field:production.route.operation,subcontracted_product:"
+msgid "Subcontracted product"
+msgstr "委外产品"
+
+msgctxt "field:production.route.operation,time:"
+msgid "Time"
+msgstr "时间"
+
+msgctxt "field:production.route.operation,time_uom:"
+msgid "Time UOM"
+msgstr "时间计量单位"
+
+msgctxt "field:production.route.operation,time_uom_digits:"
+msgid "Time UOM Digits"
+msgstr "时间单位小数位数"
+
+msgctxt "field:production.route.operation,work_center:"
+msgid "Work Center"
+msgstr "工作中心"
+
+msgctxt "field:production.route.operation,work_center_category:"
+msgid "Work Center Category"
+msgstr "工作中心类别"
+
+msgctxt "field:production.work_center,category:"
+msgid "Category"
+msgstr "类别"
+
+msgctxt "field:production.work_center,cost_price:"
+msgid "Cost Price"
+msgstr "成本价"
+
+msgctxt "field:production.work_center,employee:"
+msgid "Employee"
+msgstr "雇员"
+
+msgctxt "field:production.work_center,name:"
+msgid "Name"
+msgstr "名称"
+
+msgctxt "field:production.work_center,type:"
+msgid "Type"
+msgstr "科目"
+
+msgctxt "field:production.work_center,uom:"
+msgid "Uom"
+msgstr "计量单位"
+
+msgctxt "field:production.work_center.category,cost_price:"
+msgid "Cost Price"
+msgstr "成本价"
+
+msgctxt "field:production.work_center.category,name:"
+msgid "Name"
+msgstr "名称"
+
+msgctxt "field:production.work_center.category,type:"
+msgid "Type"
+msgstr "科目"
+
+msgctxt "field:production.work_center.category,uom:"
+msgid "Uom"
+msgstr "计量单位"
+
+msgctxt "help:production.route.operation,calculation:"
+msgid ""
+"Use Standard to multiply the amount of time by the number of units produced."
+" Use Fixed to use the indicated time in the production without considering "
+"the quantities produced. The latter is useful for a setup or cleaning "
+"operation, for example."
+msgstr "选择“标准”可将时间乘以生产数量。选择“固定”则使用指定生产时间，不考虑生产数量。后者适用于准备或清洁等工序。"
+
+msgctxt "help:production.route.operation,quantity:"
+msgid "Quantity of the production product processed by the specified time."
+msgstr "在指定时间内处理的生产产品数量。"
+
+msgctxt "model:ir.action,name:act_production_operation_type"
+msgid "Operation Types"
+msgstr "工序类型"
+
+msgctxt "model:ir.action,name:act_production_route"
+msgid "Route"
+msgstr "工艺路线"
+
+msgctxt "model:ir.action,name:act_production_route_operation"
+msgid "Route Operation"
+msgstr "工艺路线工序"
+
+msgctxt "model:ir.action,name:act_production_work_center"
+msgid "Work Center"
+msgstr "工作中心"
+
+msgctxt "model:ir.action,name:act_production_work_center_category"
+msgid "Work Center Category"
+msgstr "工作中心类别"
+
+msgctxt "model:ir.ui.menu,name:menu_production_operation_type"
+msgid "Operation Types"
+msgstr "工序类型"
+
+msgctxt "model:ir.ui.menu,name:menu_production_route"
+msgid "Routes"
+msgstr "工艺路线"
+
+msgctxt "model:ir.ui.menu,name:menu_production_work_center"
+msgid "Work Centers"
+msgstr "工作中心"
+
+msgctxt "model:ir.ui.menu,name:menu_production_work_center_category"
+msgid "Work Center Categories"
+msgstr "工作中心类别"
+
+msgctxt "model:production.operation.type,name:"
+msgid "Operation Type"
+msgstr "交易类型"
+
+msgctxt "model:production.route,name:"
+msgid "Production Route"
+msgstr "生产工艺路线"
+
+msgctxt "model:production.route.operation,name:"
+msgid "Route Operation"
+msgstr "工艺路线工序"
+
+msgctxt "model:production.work_center,name:"
+msgid "Work Center"
+msgstr "工作中心"
+
+msgctxt "model:production.work_center.category,name:"
+msgid "Work Center Category"
+msgstr "工作中心类别"
+
+msgctxt "selection:production.route.operation,calculation:"
+msgid "Fixed"
+msgstr "固定的"
+
+msgctxt "selection:production.route.operation,calculation:"
+msgid "Standard"
+msgstr "标准"
+
+msgctxt "selection:production.work_center,type:"
+msgid "Employee"
+msgstr "雇员"
+
+msgctxt "selection:production.work_center,type:"
+msgid "Machine"
+msgstr "机器"
+
+msgctxt "selection:production.work_center.category,type:"
+msgid "Employee"
+msgstr "雇员"
+
+msgctxt "selection:production.work_center.category,type:"
+msgid "Machine"
+msgstr "机器"
+
+msgctxt "view:production.operation.type:"
+msgid "Operation Type"
+msgstr "交易类型"
+
+msgctxt "view:production.route.operation:"
+msgid "Route Operation"
+msgstr "工艺路线工序"
+
+msgctxt "view:production.route:"
+msgid "Route"
+msgstr "工艺路线"
+
+msgctxt "view:production.work_center.category:"
+msgid "Work Center Category"
+msgstr "工作中心类别"
+
+msgctxt "view:production.work_center:"
+msgid "Work Center"
+msgstr "工作中心"
+
+msgctxt "model:production.route,string:"
+msgid "Production Route"
+msgstr "生产工艺路线"
