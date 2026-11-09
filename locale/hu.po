@@ -1,0 +1,243 @@
+#
+msgid ""
+msgstr ""
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "field:product.product-production.bom,route:"
+msgid "Route"
+msgstr "Műveletterv"
+
+msgctxt "field:production.operation.type,name:"
+msgid "Name"
+msgstr "Név"
+
+msgctxt "field:production.route,name:"
+msgid "Name"
+msgstr "Név"
+
+msgctxt "field:production.route,operations:"
+msgid "Operations"
+msgstr "Ügyletek"
+
+msgctxt "field:production.route,uom:"
+msgid "UOM"
+msgstr "Mértékegység"
+
+msgctxt "field:production.route.operation,calculation:"
+msgid "Calculation"
+msgstr "Számítás"
+
+msgctxt "field:production.route.operation,notes:"
+msgid "Notes"
+msgstr "Jegyzetek"
+
+msgctxt "field:production.route.operation,operation_type:"
+msgid "Operation Type"
+msgstr "Ügylet típusa"
+
+msgctxt "field:production.route.operation,quantity:"
+msgid "Quantity"
+msgstr "Mennyiség"
+
+msgctxt "field:production.route.operation,quantity_uom:"
+msgid "Quantity UOM"
+msgstr "Mennyiség mértékegysége"
+
+msgctxt "field:production.route.operation,quantity_uom_category:"
+msgid "Quantity UOM Category"
+msgstr "Mennyiségi mértékegység kategóriája"
+
+msgctxt "field:production.route.operation,quantity_uom_digits:"
+msgid "Quantity UOM Digits"
+msgstr "Mennyiségi mértékegység tizedesjegyei"
+
+msgctxt "field:production.route.operation,route:"
+msgid "Route"
+msgstr "Műveletterv"
+
+msgctxt "field:production.route.operation,subcontracted_product:"
+msgid "Subcontracted product"
+msgstr "Alvállalkozói termék"
+
+msgctxt "field:production.route.operation,time:"
+msgid "Time"
+msgstr "Időpont"
+
+msgctxt "field:production.route.operation,time_uom:"
+msgid "Time UOM"
+msgstr "Idő mértékegysége"
+
+msgctxt "field:production.route.operation,time_uom_digits:"
+msgid "Time UOM Digits"
+msgstr "Idő mértékegységének tizedesjegyei"
+
+msgctxt "field:production.route.operation,work_center:"
+msgid "Work Center"
+msgstr "Munkaközpont"
+
+msgctxt "field:production.route.operation,work_center_category:"
+msgid "Work Center Category"
+msgstr "Munkahelyközpont kategóriája"
+
+msgctxt "field:production.work_center,category:"
+msgid "Category"
+msgstr "Kategória"
+
+msgctxt "field:production.work_center,cost_price:"
+msgid "Cost Price"
+msgstr "Költségár"
+
+msgctxt "field:production.work_center,employee:"
+msgid "Employee"
+msgstr "Alkalmazott"
+
+msgctxt "field:production.work_center,name:"
+msgid "Name"
+msgstr "Név"
+
+msgctxt "field:production.work_center,type:"
+msgid "Type"
+msgstr "Típus"
+
+msgctxt "field:production.work_center,uom:"
+msgid "Uom"
+msgstr "Mértékegység"
+
+msgctxt "field:production.work_center.category,cost_price:"
+msgid "Cost Price"
+msgstr "Költségár"
+
+msgctxt "field:production.work_center.category,name:"
+msgid "Name"
+msgstr "Név"
+
+msgctxt "field:production.work_center.category,type:"
+msgid "Type"
+msgstr "Típus"
+
+msgctxt "field:production.work_center.category,uom:"
+msgid "Uom"
+msgstr "Mértékegység"
+
+msgctxt "help:production.route.operation,calculation:"
+msgid ""
+"Use Standard to multiply the amount of time by the number of units produced."
+" Use Fixed to use the indicated time in the production without considering "
+"the quantities produced. The latter is useful for a setup or cleaning "
+"operation, for example."
+msgstr ""
+"A Normál beállítás az időt megszorozza a gyártott egységek számával. A "
+"Rögzített beállítás a megadott időt használja a gyártott mennyiségtől "
+"függetlenül. Ez például beállítási vagy tisztítási műveletnél hasznos."
+
+msgctxt "help:production.route.operation,quantity:"
+msgid "Quantity of the production product processed by the specified time."
+msgstr "A gyártott termékből a megadott idő alatt feldolgozott mennyiség."
+
+msgctxt "model:ir.action,name:act_production_operation_type"
+msgid "Operation Types"
+msgstr "Művelettípusok"
+
+msgctxt "model:ir.action,name:act_production_route"
+msgid "Route"
+msgstr "Műveletterv"
+
+msgctxt "model:ir.action,name:act_production_route_operation"
+msgid "Route Operation"
+msgstr "Műveletterv művelete"
+
+msgctxt "model:ir.action,name:act_production_work_center"
+msgid "Work Center"
+msgstr "Munkaközpont"
+
+msgctxt "model:ir.action,name:act_production_work_center_category"
+msgid "Work Center Category"
+msgstr "Munkahelyközpont kategóriája"
+
+msgctxt "model:ir.ui.menu,name:menu_production_operation_type"
+msgid "Operation Types"
+msgstr "Művelettípusok"
+
+msgctxt "model:ir.ui.menu,name:menu_production_route"
+msgid "Routes"
+msgstr "Művelettervek"
+
+msgctxt "model:ir.ui.menu,name:menu_production_work_center"
+msgid "Work Centers"
+msgstr "Munkaközpontok"
+
+msgctxt "model:ir.ui.menu,name:menu_production_work_center_category"
+msgid "Work Center Categories"
+msgstr "Munkaközpont-kategóriák"
+
+msgctxt "model:production.operation.type,name:"
+msgid "Operation Type"
+msgstr "Ügylet típusa"
+
+msgctxt "model:production.route,name:"
+msgid "Production Route"
+msgstr "Gyártási műveletterv"
+
+msgctxt "model:production.route.operation,name:"
+msgid "Route Operation"
+msgstr "Műveletterv művelete"
+
+msgctxt "model:production.work_center,name:"
+msgid "Work Center"
+msgstr "Munkaközpont"
+
+msgctxt "model:production.work_center.category,name:"
+msgid "Work Center Category"
+msgstr "Munkahelyközpont kategóriája"
+
+msgctxt "selection:production.route.operation,calculation:"
+msgid "Fixed"
+msgstr "Fix"
+
+msgctxt "selection:production.route.operation,calculation:"
+msgid "Standard"
+msgstr "szabályos"
+
+msgctxt "selection:production.work_center,type:"
+msgid "Employee"
+msgstr "Alkalmazott"
+
+msgctxt "selection:production.work_center,type:"
+msgid "Machine"
+msgstr "Gép"
+
+msgctxt "selection:production.work_center.category,type:"
+msgid "Employee"
+msgstr "Alkalmazott"
+
+msgctxt "selection:production.work_center.category,type:"
+msgid "Machine"
+msgstr "Gép"
+
+msgctxt "view:production.operation.type:"
+msgid "Operation Type"
+msgstr "Ügylet típusa"
+
+msgctxt "view:production.route.operation:"
+msgid "Route Operation"
+msgstr "Műveletterv művelete"
+
+msgctxt "view:production.route:"
+msgid "Route"
+msgstr "Műveletterv"
+
+msgctxt "view:production.work_center.category:"
+msgid "Work Center Category"
+msgstr "Munkahelyközpont kategóriája"
+
+msgctxt "view:production.work_center:"
+msgid "Work Center"
+msgstr "Munkaközpont"
+
+msgctxt "model:production.route,string:"
+msgid "Production Route"
+msgstr "Gyártási műveletterv"
